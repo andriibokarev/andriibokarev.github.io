@@ -109,13 +109,9 @@
 }
 
 .post-text {
-	font-size: 16px;
+	font-size: 14px;
 	color: #595959;
 	text-align: justify;
-}
-
-.post-text-small {
-	font-size: 14px;
 }
 
 .post-text:after {

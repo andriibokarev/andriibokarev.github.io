@@ -30,9 +30,7 @@ const App = () => {
       <Route path="/stories" exact render={()=>(
           <HeaderPages/>
       )}/>
-      <Route path="/blog/:postId" exact render={()=>(
-          <HeaderPages/>
-      )}/>
+      <Route path="/blog/:postId" component={HeaderPages}/>
 			<Main/>
 			<Footer/>
     </div>

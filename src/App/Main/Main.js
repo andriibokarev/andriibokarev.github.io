@@ -23,9 +23,6 @@ const Main = () => {
             <Route path="/blog" exact render={()=>(
                 <SortBlog/>
             )}/>
-            <Route path="/blog/:postId" exact render={()=>(
-                <SortBlog/>
-            )}/>
             <div className="content">
                 <div className="container">
                     <div className="row">
@@ -58,9 +55,7 @@ const Main = () => {
                             <Route path="/stories" exact render={()=>(
                                 <MainBottom/>
                             )}/>
-                            <Route path="/blog/:postId" exact render={()=>(
-                                <MainBottom/>
-                            )}/>
+                            <Route path="/blog/:postId" component={MainBottom}/>
                         </div>
                         <div className="col-3">
                             <SideBar/>

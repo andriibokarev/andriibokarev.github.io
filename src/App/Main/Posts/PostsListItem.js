@@ -24,7 +24,7 @@ class PostsListItem extends Component {
             image,
         } = this.props
         return (
-            <div className="content-grid-post post-vertical">
+            <div className="content-grid-post">
                 <div className="post-img post-img-top">
                     <img src={image} alt={tag}></img>
                     <div className="post-tag">{tag}</div>
@@ -51,7 +51,7 @@ class PostsListItem extends Component {
                     <div className="post-title">
                         <Link to={`/blog/${id}`}>{title}</Link>
                     </div>
-                    <div className="post-text post-text-small">{shortDescription}</div>
+                    <div className="post-text">{shortDescription}</div>
                     <div className="post-info">
                         <div className="row justify-content-between align-items-center">
                             <div className="post-author row">

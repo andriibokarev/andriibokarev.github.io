@@ -7,6 +7,10 @@
 	font-size: 20px;
 }
 
+.main-more-btn a {
+	color: #3f51b5;
+}
+
 .more-btn-title {
 	font-weight: 600;
 	padding-right: 15px;
