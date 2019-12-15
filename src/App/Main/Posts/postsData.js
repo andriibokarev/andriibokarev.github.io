@@ -1,4 +1,4 @@
-const productsData = [
+const postsData = [
     {  
         id:1,
         title:"Title Blog Post #1",
@@ -136,4 +136,10 @@ const productsData = [
     },
 ]
 
-export default productsData
+export const getPostsMap = (array) => array.reduce((accObj,post)=>({
+    ...accObj,
+    [post.id]:post,
+}),{})
+
+
+export default postsData

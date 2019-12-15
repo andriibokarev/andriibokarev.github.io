@@ -3,19 +3,29 @@ import {Route} from 'react-router-dom'
 
 import PostsList from './Posts/PostsList'
 import SortBlog from './SortBlog/SortBlog'
+import MainBottom from './MainBottom/MainBottom'
 import SideBar from './SideBar/SideBar'
 import AboutPage from './AboutPage/AboutPage'
 import BlogPage from './BlogPage/BlogPage'
 import PhotosPage from './PhotosPage/PhotosPage'
 import VideosPage from './VideosPages/VideosPage'
 import StoriesPage from './StoriesPage/StoriesPage'
+import PostPage from './Posts/PostPage'
 
 import './main.css'
 
 const Main = () => {
     return (
         <main className="main">
-            <SortBlog/>
+            <Route path="/" exact render={()=>(
+                <SortBlog/>
+            )}/>
+            <Route path="/blog" exact render={()=>(
+                <SortBlog/>
+            )}/>
+            <Route path="/blog/:postId" exact render={()=>(
+                <SortBlog/>
+            )}/>
             <div className="content">
                 <div className="container">
                     <div className="row">
@@ -24,24 +34,33 @@ const Main = () => {
                                 <Route path="/" exact render={()=>(
                                     <PostsList/>
                                 )}/>
+                                <Route path="/blog/:postId" component={PostPage}/>
                                 <Route path="/about" component={AboutPage}/>
-                                <Route path="/blog" component={BlogPage}/>
+                                <Route path="/blog" exact render={()=>(
+                                    <BlogPage/>
+                                )}/>
                                 <Route path="/photos" component={PhotosPage}/>
                                 <Route path="/videos" component={VideosPage}/>
                                 <Route path="/stories" component={StoriesPage}/>
                             </div>
-                            <div className="main-bottom">
-                                <div className="container">
-                                    <div className="main-more-btn">
-                                        <div className="row flex-end align-items-center">
-                                            <div className="more-btn-title">More</div>
-                                            <div className="more-btn-arrow">
-                                                <i className="fas fa-arrow-right"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <Route path="/" exact render={()=>(
+                                <MainBottom/>
+                            )}/>
+                            <Route path="/blog" exact render={()=>(
+                                <MainBottom/>
+                            )}/>
+                            <Route path="/photos" exact render={()=>(
+                                <MainBottom/>
+                            )}/>
+                            <Route path="/videos" exact render={()=>(
+                                <MainBottom/>
+                            )}/>
+                            <Route path="/stories" exact render={()=>(
+                                <MainBottom/>
+                            )}/>
+                            <Route path="/blog/:postId" exact render={()=>(
+                                <MainBottom/>
+                            )}/>
                         </div>
                         <div className="col-3">
                             <SideBar/>

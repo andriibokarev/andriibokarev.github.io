@@ -27,6 +27,7 @@ const PostsList = () => {
                     })=>(
                         <div className="col-4 item-padding" key={id}>
                             <PostsListItem
+                                id={id}
                                 title={title}
                                 description={description}
                                 shortDescription={shortDescription}

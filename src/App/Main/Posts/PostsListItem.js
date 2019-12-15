@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
+
 import "./PostsListItem.css"
 
 
@@ -7,7 +9,7 @@ class PostsListItem extends Component {
 
     render() {
         const {
-            // id,
+            id,
             title,
             // description,
             shortDescription,
@@ -46,7 +48,9 @@ class PostsListItem extends Component {
                     </div>
                 </div>
                 <div className="post-content">
-                    <div className="post-title post-title-small">{title}</div>
+                    <div className="post-title">
+                        <Link to={`/blog/${id}`}>{title}</Link>
+                    </div>
                     <div className="post-text post-text-small">{shortDescription}</div>
                     <div className="post-info">
                         <div className="row justify-content-between align-items-center">
