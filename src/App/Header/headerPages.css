@@ -1,0 +1,5 @@
+.header-pages {
+	background: url(header_bg.jpg) center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}

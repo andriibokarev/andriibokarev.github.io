@@ -1,0 +1,31 @@
+.sort-blog {
+	background-color: #fff;
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 30px;
+}
+
+.sort-blog-title {
+	font-size: 16px;
+	padding: 25px 0;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.sort-blog-item {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #000;
+	background-color: #f5f5f5;
+	padding: 10px;
+	margin-right: 10px;
+	border: 1px solid #f5f5f5;
+	border-radius: 20px;
+	transition: .3s;
+}
+
+.sort-blog-item:hover {
+	color: #3f51b5;
+	border: 1px solid #3f51b5;
+	cursor: pointer;
+	background-color: transparent;
+}
